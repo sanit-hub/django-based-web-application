@@ -22,13 +22,17 @@ Also while running this project for first time you need a open the project folde
 step 1:apply new migrations
 
 command: python manage.py makemigration (you need to crate a data base named wheelzone1  on postgre sql PgAdmin before using the commands)
+
 python manage.py migrate
 
 step2:you need to create superuser
-command:python manage.py createsuperuser 
+
+command:python manage.py createsuperuser
+
 enter gmaiil and any password.
 
 step3:after creating super user you can run your project
+
 command:python manage.py runserver
 
 once the command runs open the locahost adress and paste it in your browser
