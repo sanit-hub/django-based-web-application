@@ -29,7 +29,7 @@ step2:you need to create superuser
 
 command:python manage.py createsuperuser
 
-enter gmaiil and any password.
+enter gmail and any password.
 
 step3:after creating super user you can run your project
 
