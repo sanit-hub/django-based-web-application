@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+
+
+background-color:grey;
+background-repeat: no-repeat;
+
+
+}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+
+
+.error
+{
+  color:red;
+  padding:top 5px;
+  float:; left ;
+  width: 100%;
+}
+
+input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+
+
+}
+Back
+      {
+       background-color: grey;
+        border: none;
+        color: white;
+        padding: 30px 60px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+
+}
+
+
+
+specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: green;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: green;
+}
+.container {
+  border-radius: 5px;
+  background-color: grey;
+  padding: 20px;
+  margin: auto;
+  width: 35%;
+  color: white;
+  background-color:black ;
+  border-radius:20px;
+
+  }
+
+h3
+{
+  text-align:center;
+  color: white;
+  font-size:50px;
+}
+</style>
+</head>
+
+
+<body>
+<h3>SALES REPORT</h3>
+
+<div class="container">
+<form action="{% url 'salesreportview_table' %}" method="POST">
+{% csrf_token %}
+<label for="firstdate">FROM</label>
+<input type="text" name="firstdate" required placeholder="yy-mm-dd">
+<br><br>
+<label for="lastdate">TO</label>
+<input type="text" name="lastdate" required placeholder="yy-mm-dd">
+
+
+
+<br><br>
+
+    <input type="submit" name="submit">
+    <br><br>
+   <input type="button" value="Back" class="Back" onclick="history.back(-1)" />
+     <br><br>
+
+</form>
+</div>
+
+
+
+</body>
+</html>

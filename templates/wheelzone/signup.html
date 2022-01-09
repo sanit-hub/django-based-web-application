@@ -1,0 +1,132 @@
+<html>
+<body bgcolor=#121245>
+<p class="texto">Wheel Zone</p>
+<div class="Registro">
+<form method="post" action="{% url 'signup_def' %}">
+    {% csrf_token %}
+
+<input type="text" name="firstname"  id="firstname" required placeholder="firstname">
+<br>
+.
+<input type="text" name="lastname" id="lastname"  required placeholder="lastname">
+<br>
+.
+<input type="text"  name="username" id="username"  required placeholder="username">
+<br>
+.
+<input type="text" name="email"   id="email" required placeholder="email">
+<br>
+.
+<input type="password" name="password" id="password" required placeholder=" password">
+			<input type="submit" value="Register" >
+
+</form>
+</body>
+    <style>
+
+
+@import url(https://fonts.googleapis.com/css?family=Titan+One);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
+
+
+body {
+
+  text-align: center;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 2.5em;
+
+}
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+input {
+	font-size: 1em;
+	line-height: 2.5em;
+	margin: 0;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+.Registro {
+	margin: 50px auto;
+	width: 242px;
+}
+
+
+
+.Registro input {
+	border: none;
+	height: 48px;
+	outline: none;
+}
+
+.Registro input[type="text"] {
+	background-color: #fff;
+	border-top: 2px solid #2c90c6;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+    border-radius: 10px;
+	color: #363636;
+	padding-left: 36px;
+	width: 250px;
+}
+
+.Registro input[type="password"] {
+	background-color: #fff;
+	border-top: 2px solid #2c90c6;
+	border-right: 1px solid #000;
+	border-bottom: 2px solid #2c90c6;
+	border-left: 1px solid #000;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+    border-radius: 10px;
+	color: #363636;
+	margin-bottom: 30px;
+	padding-left: 36px;
+	width: 250px;
+}
+
+.Registro input[type="submit"] {
+	background-color: blue;
+	border: 1px solid #2c90c6;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 48px;
+	text-align: center;
+	width: 250px;
+}
+
+.Registro input[type="submit"]:hover {
+	background-color: green;
+  box-shadow: 2px 2px 20px  green, #fff 0 -1px 2px;
+}
+
+.texto {
+  color: #2c90c6;
+  font-size: 40px;
+  margin: 2% auto;
+  text-align: center;
+  font-family: 'Titan One';
+  text-shadow: 1px 2px 1px  rgba(0,0,0,.5);
+  padding-top: 40px;
+}
+
+p:hover {
+  text-shadow: 2px 2px 20px  #2c90c6, #fff 0 -1px 2px;
+}
+
+    </style>
+    </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=number]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.custom-select{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.btn1 {
+background-color:blue ;
+border: none;
+color: white;
+padding: 12px 16px;
+font-size: 16px;
+cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<form method=post action="{% url 'salesreportoffline_def' %}">
+    {% csrf_token %}
+  <div class="container">
+    <h1>Billing Form</h1>
+    <hr>
+
+   {% for data in customer_data %}
+
+    <label for="firstname"><b>Firstname</b></label>
+    <input type="text" value="{{data.firstname}}" name="firstname" id="psw" >
+
+    <label for="lastname"><b>Lastname</b></label>
+    <input type="text" value="{{data.lastname}}" name="lastname" id="psw" >
+
+    <label for="vehicle"><b>Vehicle</b></label>
+    <input type="text" value="{{data.vehicle}}" name="vehicle" id="psw">
+
+
+    <label for="model"><b>model</b></label>
+    <input type="text" value="{{data.model}}" name="model" id="psw-repeat" >
+
+    <label for="regno"><b>Registration number</b></label>
+    <input type="text" value="{{data.regno}}" name="regno" id="psw-repeat" >
+
+    <label for="location"><b>Location</b></label>
+    <input type="text" value="{{data.location}}" name="location" id="psw">
+
+
+    <label for="services"><b>Service</b></label>
+    <input type="text" value="{{data.services}}" name="services" id="psw">
+
+    <label for="phonenumber"><b>Phonenumber</b></label>
+    <input type="number" value="{{data.phonenumber}}" name="phonenumber" id="psw">
+    <hr>
+    {% endfor %}
+    <label for="phonenumber"><b>Bill</b></label>
+    <input type="number" placeholder="enter the bill amount" name="billamount" id="psw" required>
+    <hr>
+
+
+<label for="date"><b>Date</b></label>
+<input type="date"  name="month" id="psw" required>
+<hr>
+
+
+     <button type="submit" class="registerbtn">Bill</button>
+
+
+  </div>
+</form>
+
+</body>
+</html>
